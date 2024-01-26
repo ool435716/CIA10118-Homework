@@ -11,8 +11,7 @@ public class Test5 {
 			
 			if(i / 10 == 4) {
 				continue;
-			}
-			if(i % 10 == 4) {
+			}else if(i % 10 == 4) {
 				continue;
 			}
 			System.out.println(i);
