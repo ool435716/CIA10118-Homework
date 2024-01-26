@@ -11,16 +11,18 @@ public class Test1 {
 		int[] datas = new int [3];
 		for (int i = 0; i < datas.length; i++) {
 			datas[i] = scanner.nextInt();
-						
+					
 		}
 		if(datas[0] == datas[1] && datas[0] == datas[2] && datas[0] != 0) {
 			System.out.println("正三角形");
+		}else if((datas[0] == 0 && datas[1] == 0 && datas[2] == 0)||(datas[1] == 0 || 
+				datas[2] == 0 || datas[0] == 0)||(datas[0] + datas[1] < datas[2] || 
+				datas[1] + datas[2] < datas[0] || datas[0] + datas[2] < datas[1])) {
+			System.out.println("不是三角形");
 		}else if((datas[0] == datas[2] && datas[0] != datas[1]) ||
 				(datas[1] == datas[2] && datas[1] != datas[0]) ||
 				(datas[0] == datas[1] && datas[0] != datas[2])) {
 			System.out.println("等腰三角形");
-		}else if(datas[0] == 0 && datas[1] == 0 && datas[2] == 0) {
-			System.out.println("不是三角形");
 		}else if(datas[0] * datas[0] + datas[1] * datas[1] == datas[2] * datas[2] ||
 				datas[2] * datas[2] + datas[1] * datas[1] == datas[0] * datas[0] ||
 				datas[0] * datas[0] + datas[2] * datas[2] == datas[1] * datas[1]){
@@ -28,7 +30,6 @@ public class Test1 {
 		}else {
 			System.out.println("其他三角形");
 		}
-		
 		
 		
 		scanner.close();
