@@ -11,14 +11,19 @@ public class Test3 {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("阿文...請輸入你討厭哪個數字?");
 		int hate = scanner.nextInt();
+		
 		int count = 0;
-		for (int i = 1; i <= 49; i++) {			
+		if(hate < 1 || hate > 9) {
+			System.out.println("超出可選範圍");
+		}else
+			for (int i = 1; i <= 49; i++) {			
 			
-			if(i / 10 == hate) {
+			 if(i / 10 == hate) {
 				continue;
 			}else if(i % 10 == hate) {
 				continue;
 			}
+			
 			
 			System.out.print(i + " ");
 			count++;
@@ -35,27 +40,30 @@ public class Test3 {
 //		int hate = scanner.nextInt();
 //		int[] number = new int[6];
 //		
-//		for (int i = 0; i < number.length ; i++) {	
-//			
-//			number[i] = (int)(Math.random() * 49) + 1;
-//			
-//			for (int j = 0; j < i; j++) {
-//				if(number[j] == number[i]) {
-//					number[i] = (int)(Math.random() * 50) + 1;
-//					j = 0;
+//		if(hate < 1 || hate > 9) {
+//			System.out.println("超出可選範圍");
+//		}else
+//			for (int i = 0; i < number.length ; i++) {	
+//				
+//				number[i] = (int)(Math.random() * 49) + 1;
+//				
+//				for (int j = 0; j < i; j++) {
+//					if(number[j] == number[i]) {
+//						number[i] = (int)(Math.random() * 49) + 1;
+//						j = 0;
+//					}
 //				}
-//			}
-//			
-//			if(number[i] / 10 == hate) {
-//				i--;
-//				continue;
-//			}else if(number[i] % 10 == hate) {
-//				i--;
-//				continue;
-//			}
-//			
-//			System.out.print(number[i] + " ");
-//		}		
+//				
+//				if(number[i] / 10 == hate) {
+//					i--;
+//					continue;
+//				}else if(number[i] % 10 == hate) {
+//					i--;
+//					continue;
+//				}
+//				
+//				System.out.print(number[i] + " ");
+//			}		
 //		scanner.close();
 		
 		
