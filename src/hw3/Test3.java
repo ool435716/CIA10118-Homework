@@ -15,7 +15,7 @@ public class Test3 {
 		int count = 0;
 		if(hate < 1 || hate > 9) {
 			System.out.println("超出可選範圍");
-		}else
+		}else {
 			for (int i = 1; i <= 49; i++) {			
 			
 			 if(i / 10 == hate) {
@@ -27,9 +27,9 @@ public class Test3 {
 			
 			System.out.print(i + " ");
 			count++;
+			}
+			System.out.println("總共有" + count + "個數字可選");
 		}
-		System.out.println("總共有" + count + "個數字可選");
-		
 		scanner.close();
 		
 		
@@ -42,7 +42,7 @@ public class Test3 {
 //		
 //		if(hate < 1 || hate > 9) {
 //			System.out.println("超出可選範圍");
-//		}else
+//		}else{
 //			for (int i = 0; i < number.length ; i++) {	
 //				
 //				number[i] = (int)(Math.random() * 49) + 1;
@@ -63,7 +63,8 @@ public class Test3 {
 //				}
 //				
 //				System.out.print(number[i] + " ");
-//			}		
+//			}
+//		}
 //		scanner.close();
 		
 		
