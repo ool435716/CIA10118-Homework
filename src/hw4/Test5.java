@@ -24,7 +24,7 @@ public class Test5 {
 		if (year % 4 == 0 || year % 400 == 0) {
 			total[1] = 29;
 			if ((year > 2024 || year <= 0) || (month > 12 || month <= 0) || (day > total[month - 1] || day < 0)) {
-				System.out.println("輸入錯誤");
+				System.out.println("超出範圍");
 			} else {
 				for (int i = 0; i < total.length; i++) {
 					if (month == i + 1) {
@@ -38,10 +38,10 @@ public class Test5 {
 
 		} else {
 			if ((year > 2024 || year <= 0) || (month > 12 || month <= 0) || (day > total[month - 1] || day < 0)) {
-				System.out.println("輸入錯誤");
+				System.out.println("超出範圍");
 			} else {
 				if (day == total[1] + 1) {
-					System.out.println("輸入錯誤");
+					System.out.println("超出範圍");
 				} else {
 					for (int i = 0; i < total.length; i++) {
 						if (month == i + 1) {
