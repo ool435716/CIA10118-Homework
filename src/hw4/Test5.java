@@ -21,7 +21,7 @@ public class Test5 {
 		int day = scanner.nextInt();
 		int sum = 0;
 
-		if (year % 4 == 0 || year % 400 == 0) {
+		if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
 			total[1] = 29;
 			if ((year > 2024 || year <= 0) || (month > 12 || month <= 0) || (day > total[month - 1] || day < 0)) {
 				System.out.println("超出範圍");
