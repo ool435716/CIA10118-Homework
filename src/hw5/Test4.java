@@ -3,6 +3,7 @@ package hw5;
 public class Test4 {
 	public static void main(String[] args) {
 		Test4 test4 = new Test4();
+		System.out.println("本次隨機產生驗證碼為: ");
 		System.out.println(test4.getAuthCode());
 	}
 	
