@@ -9,7 +9,7 @@ import java.util.List;
 
 public class Test2 {
 	public static void main(String[] args) throws IOException {
-		FileOutputStream fos = new FileOutputStream("C:\\CIA101_Workspace\\CIA10118-Homework\\Data.txt", true);
+		FileOutputStream fos = new FileOutputStream("C:\\CIA101_Workspace\\CIA10118-Homework\\src\\hw8\\Data.txt", true);
 		BufferedOutputStream bos = new BufferedOutputStream(fos);
 		PrintStream ps = new PrintStream(bos);
 		List<Integer> list = new ArrayList<>();
@@ -19,7 +19,8 @@ public class Test2 {
 		}
 		
 		for (Integer integer : list) {
-			ps.print(integer + " ");
+			ps.print(integer + "  ");
+			
 		}
 		
 		ps.close();

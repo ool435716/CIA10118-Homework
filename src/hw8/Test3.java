@@ -23,7 +23,8 @@ public class Test3 {
 	
 	public static void main(String[] args) throws IOException {
 		Test3 test3 = new Test3();
-		test3.copyFile("hello.txt", "hello1.txt");
+		test3.copyFile("C:\\CIA101_Workspace\\CIA10118-Homework\\src\\hw8\\hello.txt", 
+				"C:\\CIA101_Workspace\\CIA10118-Homework\\src\\hw8\\hello1.txt");
 		
 	}
 }

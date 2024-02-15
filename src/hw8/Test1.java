@@ -10,7 +10,7 @@ public class Test1 {
 //		請寫一個程式讀取這個Sample.txt檔案,並輸出以下訊息:
 //			Sample.txt檔案共有xxx個位元組,yyy個字元,zzz列資料
 		
-		File file = new File("C:\\CIA101_Workspace\\CIA10118-Homework\\Sample.txt");
+		File file = new File("C:\\CIA101_Workspace\\CIA10118-Homework\\src\\hw8\\Sample.txt");
 		BufferedReader br = new BufferedReader(new FileReader(file));
 				
 
