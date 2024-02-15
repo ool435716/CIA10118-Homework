@@ -1,5 +1,6 @@
 package hw8;
 
+import java.io.EOFException;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -15,11 +16,12 @@ public class Test5 {
 			while(true) {
 				((Animal) ois.readObject()).speak();
 			}
-			
+		}catch (EOFException e) {
+				System.out.println("end");			 
 		} catch (ClassNotFoundException e) {
-			System.out.println("end");
+			e.printStackTrace();
 		} catch (IOException e) {
-			System.out.println("end");
+			e.printStackTrace();
 		}
 		ois.close();
 		fis.close();

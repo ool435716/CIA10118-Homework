@@ -9,7 +9,9 @@ import java.io.ObjectOutputStream;
 public class Test4 {
 	public static void main(String[] args) throws IOException {
 		File file = new File("C:\\data");
-		file.mkdir();
+		if(!file.exists()) {
+			file.mkdir();
+		}
 		
 		FileOutputStream fos = new FileOutputStream("C:\\data\\Object.ser");
 		ObjectOutputStream oos = new ObjectOutputStream(fos);
