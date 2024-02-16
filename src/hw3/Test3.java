@@ -35,6 +35,7 @@ public class Test3 {
 //		scanner.close();
 		
 		
+		
 //		進階挑戰
 //		
 		Scanner scanner = new Scanner(System.in);
