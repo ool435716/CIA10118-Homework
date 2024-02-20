@@ -63,8 +63,8 @@ public class Test1 {
 		
 		System.out.println("===========================================");
 		
-		for (Object object : list1) {
-			System.out.println(object);
+		for (Number number : list1) {
+			System.out.println(number);
 		}
 		
 	}
