@@ -66,6 +66,7 @@ public class Test1 {
 		for (Object object : list1) {
 			System.out.println(object);
 		}
+		
 	}
 	
 }

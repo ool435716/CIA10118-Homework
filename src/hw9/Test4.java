@@ -16,8 +16,8 @@ public class Test4 {
 		set.add(new Train(1222, "區間", "樹林", "七堵", 300));
 		set.add(new Train(1254, "區間", "屏東", "基隆", 700));
 		
-		for (Object object : set) {
-			System.out.println(object);
+		for (Train train : set) {
+			System.out.println(train);
 		}
 		
 		System.out.println("========================================================================");

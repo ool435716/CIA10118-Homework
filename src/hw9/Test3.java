@@ -18,8 +18,8 @@ public class Test3 {
 		
 		Collections.sort(list);
 		
-		for (Object object : list) {
-			System.out.println(object);
+		for (Train train : list) {
+			System.out.println(train);
 		}
 		
 		System.out.println("========================================================================");
