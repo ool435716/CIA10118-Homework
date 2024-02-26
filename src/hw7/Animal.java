@@ -1,4 +1,4 @@
-package hw8;
+package hw7;
 
 public abstract class Animal {
 	

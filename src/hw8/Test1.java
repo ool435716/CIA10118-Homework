@@ -1,31 +1,72 @@
 package hw8;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 public class Test1 {
-	public static void main(String[] args) throws IOException {
-//		請寫一個程式讀取這個Sample.txt檔案,並輸出以下訊息:
-//			Sample.txt檔案共有xxx個位元組,yyy個字元,zzz列資料
+	public static void main(String[] args) {
+//		Integer(100)、Double(3.14)、Long(21L)、Short(“100”)、Double(5.1)、“Kitty”、Integer(100)、
+//		Object物件、“Snoopy”、BigInteger(“1000”)
+		List<Object> list = new ArrayList<>();
+		list.add(100);
+		list.add(3.14);
+		list.add(21L);
+		list.add((short)100);
+		list.add(5.1);
+		list.add("Kitty");
+		list.add(100);
+		list.add(new Train(202, "普悠瑪", "樹林", "花蓮", 400));
+		list.add("Snoopy");
+		list.add(new BigInteger("1000"));
 		
-		File file = new File("C:\\CIA101_Workspace\\CIA10118-Homework\\src\\hw8\\Sample.txt");
-		BufferedReader br = new BufferedReader(new FileReader(file));
-				
-
-		String s;
-		int count = 0;
-		int total = 0;
-		int sum = 0;
-		while ((s = br.readLine()) != null) {
-			System.out.println(s);
-			total += s.length();
-			count ++;
-			sum += s.getBytes().length;
+		Iterator<Object> it = list.iterator();
+		while(it.hasNext()) {
+			System.out.println(it.next());
 		}
-		System.out.println("\nSample.txt檔案共有" + sum + "個位元組," + total + "個字元," + count + "列資料");
 		
-		br.close();
+		System.out.println("===========================================");
+		
+		for (int i = 0; i < list.size(); i++) {
+			System.out.println(list.get(i));
+		}
+		
+		System.out.println("===========================================");
+		
+		for (Object object : list) {
+			System.out.println(object);
+		}
+		
+		System.out.println("===========================================");
+		
+		
+		List<Number> list1 = new ArrayList<>();
+		list1.add(100);
+		list1.add(3.14);
+		list1.add(21L);
+		list1.add((short)100);
+		list1.add(5.1);
+		list1.add(100);
+		list1.add(new BigInteger("1000"));
+		
+		Iterator<Number> it1 = list1.iterator();
+		while(it1.hasNext()) {
+			System.out.println(it1.next());
+		}
+		
+		System.out.println("===========================================");
+		
+		for (int i = 0; i < list1.size(); i++) {
+			System.out.println(list1.get(i));
+		}
+		
+		System.out.println("===========================================");
+		
+		for (Number number : list1) {
+			System.out.println(number);
+		}
+		
 	}
+	
 }

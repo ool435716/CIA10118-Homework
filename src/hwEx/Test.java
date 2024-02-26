@@ -1,4 +1,4 @@
-package hw7;
+package hwEx;
 
 public class Test {
 	public static void main(String[] args) {

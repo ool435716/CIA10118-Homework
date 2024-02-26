@@ -1,72 +1,52 @@
 package hw9;
 
-import java.math.BigInteger;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
 
-public class Test1 {
+public class Test1 implements Runnable{
+	String name;
+	int counter = 0;
+	
+
+	public Test1() {
+		super();
+	}
+
+
+	public Test1(String name) {
+		super();
+		this.name = name;
+	}
+
+
+	@Override
+	public void run() { 
+		while(counter < 10) {
+			counter++;
+			System.out.println(name + "吃第" + counter + "碗飯");
+			try {
+				Thread.sleep((int)(Math.random() * 2500) + 500);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			
+			
+		}
+		System.out.println(name + "吃完了!");
+	}
 	public static void main(String[] args) {
-//		Integer(100)、Double(3.14)、Long(21L)、Short(“100”)、Double(5.1)、“Kitty”、Integer(100)、
-//		Object物件、“Snoopy”、BigInteger(“1000”)
-		List<Object> list = new ArrayList<>();
-		list.add(100);
-		list.add(3.14);
-		list.add(21L);
-		list.add((short)100);
-		list.add(5.1);
-		list.add("Kitty");
-		list.add(100);
-		list.add(new Train(202, "普悠瑪", "樹林", "花蓮", 400));
-		list.add("Snoopy");
-		list.add(new BigInteger("1000"));
-		
-		Iterator<Object> it = list.iterator();
-		while(it.hasNext()) {
-			System.out.println(it.next());
+		Test1 test1 = new Test1("饅頭人");
+		Thread t1 = new Thread(test1);
+		Test1 test2 = new Test1("詹姆士");
+		Thread t2 = new Thread(test2);
+		System.out.println("-----大胃王快食比賽開始!-----");
+		t1.start();
+		t2.start();
+		try {
+			t1.join();
+			t2.join();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
 		}
-		
-		System.out.println("===========================================");
-		
-		for (int i = 0; i < list.size(); i++) {
-			System.out.println(list.get(i));
-		}
-		
-		System.out.println("===========================================");
-		
-		for (Object object : list) {
-			System.out.println(object);
-		}
-		
-		System.out.println("===========================================");
-		
-		
-		List<Number> list1 = new ArrayList<>();
-		list1.add(100);
-		list1.add(3.14);
-		list1.add(21L);
-		list1.add((short)100);
-		list1.add(5.1);
-		list1.add(100);
-		list1.add(new BigInteger("1000"));
-		
-		Iterator<Number> it1 = list1.iterator();
-		while(it1.hasNext()) {
-			System.out.println(it1.next());
-		}
-		
-		System.out.println("===========================================");
-		
-		for (int i = 0; i < list1.size(); i++) {
-			System.out.println(list1.get(i));
-		}
-		
-		System.out.println("===========================================");
-		
-		for (Number number : list1) {
-			System.out.println(number);
-		}
-		
+		System.out.println("-----大胃王快食比賽結束!-----");
 	}
 	
 }

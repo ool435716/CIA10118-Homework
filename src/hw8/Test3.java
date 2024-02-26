@@ -1,30 +1,38 @@
 package hw8;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
 
 public class Test3 {
-	public void copyFile(String s1, String s2) throws IOException {
-		File inputFile = new File(s1); 
-		File outputFile = new File(s2);
+	public static void main(String[] args) {
+		List<Train> list = new ArrayList<>();
+		list.add(new Train(202, "普悠瑪", "樹林", "花蓮", 400));
+		list.add(new Train(1254, "區間", "屏東", "基隆", 700));
+		list.add(new Train(118, "自強", "高雄", "台北", 500));
+		list.add(new Train(1288, "區間", "新竹", "基隆", 400));
+		list.add(new Train(122, "自強", "台中", "花蓮", 600));
+		list.add(new Train(1222, "區間", "樹林", "七堵", 300));
+		list.add(new Train(1254, "區間", "屏東", "基隆", 700));
 		
-		FileInputStream fis = new FileInputStream(inputFile);
-		FileOutputStream fos = new FileOutputStream(outputFile);
+		Collections.sort(list);
 		
-		int i;
-		while((i = fis.read()) != -1) {
-			fos.write(i);
+		for (Train train : list) {
+			System.out.println(train);
 		}
-		fis.close();
-		fos.close();
-	}
-	
-	public static void main(String[] args) throws IOException {
-		Test3 test3 = new Test3();
-		test3.copyFile("C:\\CIA101_Workspace\\CIA10118-Homework\\src\\hw8\\hello.txt", 
-				"C:\\CIA101_Workspace\\CIA10118-Homework\\src\\hw8\\hello1.txt");
 		
+		System.out.println("========================================================================");
+		
+		Iterator<Train> iterator = list.iterator();
+		while(iterator.hasNext()) {
+			System.out.println(iterator.next());
+		}
+		
+		System.out.println("========================================================================");
+		
+		for (Iterator<Train> iterator2 = list.iterator(); iterator2.hasNext();) {
+			System.out.println(iterator2.next());
+		}
 	}
 }
